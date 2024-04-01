@@ -1,0 +1,64 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Grgoire</title>
+    <meta name="description" content="Designer and Developer in Japan">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="/assets/css/main.1cb63c9d.css" rel="stylesheet">
+    <script src="/assets/js/app.d85f7f9b.js" defer></script>
+
+</head>
+<body>
+    <header class="headerpage">
+        <a class="select">Home</a>
+        <a><span onclick="window.location.href = 'realisation.html'">Réalisations</span></a>
+        <a><span><img src="/assets/texture/g.png" alt="logo"></span></a>
+        <a><span onclick="window.location.href = 'contact.html'">Contact</span></a>
+        <a><span onclick="window.location.href = 'github.html'">Github</span></a>
+    </header>
+    <div id="Page" class="is-dark">
+        <div id="Background">
+        <canvas data-engine="three.js r161" width="1215" height="869" style="width: 1215.41px; height: 869.406px;"></canvas>
+    </div>
+    <section class="layers">
+        <div class="layers__container parallax">
+            <div class="layers__item layer-background"></div>
+            <div class="layers__item layer-1-ast"></div>
+            <div class="layers__item layer-2-main">
+            <div class="main-content">
+                <h1>Grégoire, <span id="age"></span> <span class="block">Développeur</span></h1>
+                <div class="subtitle">CSS, JS, HTML, PHP, MYSQL, Python, C++</div>
+            </div>
+        </div>
+        <div class="layers__item layer-3-rain">
+            <canvas class="rain"></canvas>
+        </div>
+        <div class="layers__item layer-4-leaves"></div>
+        <div class="layers__item layer-5-glow"></div>
+        </div>
+    </section>
+
+    <main class="content" id="Content" data-scroll="area">
+        <div class="content_inner" data-scroll="target" style="width: 100%; height: 100%;">
+        </div>
+    </main>
+    </div>
+    <script src="/assets/js/main.js"></script>
+    <script>
+function calculerNombreAnnees(date) {
+    var aujourdHui = new Date();
+    var dateDonnee = new Date(date);
+    var difference = aujourdHui.getTime() - dateDonnee.getTime();
+    var nombreAnnees = difference / (1000 * 60 * 60 * 24 * 365);
+    nombreAnnees = Math.floor(nombreAnnees);
+    return nombreAnnees;
+}
+
+    var dateDonnee = '2006-12-27';
+    document.getElementById('age').textContent = calculerNombreAnnees(dateDonnee) + " ans";
+</script>
+
+
+    </body>
+</html>
