@@ -166,3 +166,11 @@ body {
     transform: translate(-50%, 20%) rotateX(10deg) rotateY(10deg); 
 }
 
+#fluid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+  }
+  
