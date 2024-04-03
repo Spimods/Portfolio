@@ -166,3 +166,18 @@ body {
     transform: translate(-50%, 20%) rotateX(10deg) rotateY(10deg); 
 }
 
+.anime-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+
+}
+
+.anime-container .dot{
+z-index: 100;
+position: absolute;
+border-radius: 50%;
+background-color: #f1f1f1;
+}

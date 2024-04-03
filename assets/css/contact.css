@@ -1,0 +1,109 @@
+div {
+    font-family: "Merriweather", serif;
+    font-size: 2rem;
+  }
+  
+  p,
+  a {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 2rem;
+    color: #eee;
+  }
+  
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1rem;
+    list-style-type: none;
+    font-size: 2rem;
+  }
+  
+  ul li {
+    padding: 1rem;
+    background: #5151514a;
+    border-radius: 12px;
+  }
+  ul li {
+    margin: 0 20px;
+  }
+  
+  ul li:first-child {
+    margin-left: 0;
+  }
+  
+  ul li:last-child {
+    margin-right: 0;
+  }
+  
+  .fab {
+    font-size: 5rem;
+  }
+  
+  /* transition for social icon hover animation */
+  .fa-facebook,
+  .fa-codepen,
+  .fa-youtube,
+  .fa-instagram,
+  .fa-github,
+  .fa-discord {
+    transition: 0.4s;
+    cursor: pointer;
+  }
+  
+  /* social media icons hover color */
+  .fa-facebook:hover,
+  .fa-facebook:focus {
+    color: #1877f2;
+    transform: scale(1.1);
+  }
+  
+  .fa-twitter:hover,
+  .fa-twitter:focus {
+    color: #1da1f2;
+    transform: scale(1.1);
+  }
+  
+  .fa-youtube:hover,
+  .fa-youtube:focus {
+    color: #df2426;
+    transform: scale(1.1);
+  }
+  
+  .fa-instagram:hover,
+  .fa-instagram:focus {
+    color: #bd22a2;
+    transform: scale(1.1);
+  }
+  
+  .fa-github:hover,
+  .fa-github:focus {
+    color: #000;
+    transform: scale(1.1);
+  }
+  
+  .fa-github:hover,
+  .fa-github:focus {
+    color: #000;
+    transform: scale(1.1);
+  }
+  
+  .fa-codepen:hover,
+  .fa-codepen:focus {
+    color: #000;
+    transform: scale(1.1);
+  }
+  
+  .fa-discord:hover,
+  .fa-discord:focus {
+    color: #7289DA;
+  }
+  section {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 40%;
+    z-index: 2;
+  }
