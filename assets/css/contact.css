@@ -41,42 +41,24 @@ div {
   .fab {
     font-size: 5rem;
   }
-  
-  /* transition for social icon hover animation */
-  .fa-facebook,
+  svg {
+    width: 5rem;
+  }
+
   .fa-codepen,
-  .fa-youtube,
-  .fa-instagram,
   .fa-github,
-  .fa-discord {
+  .fa-discord,
+  svg {
     transition: 0.4s;
     cursor: pointer;
   }
   
-  /* social media icons hover color */
-  .fa-facebook:hover,
-  .fa-facebook:focus {
-    color: #1877f2;
+  .fa-github:hover,
+  .fa-github:focus {
+    color: #000;
     transform: scale(1.1);
   }
-  
-  .fa-twitter:hover,
-  .fa-twitter:focus {
-    color: #1da1f2;
-    transform: scale(1.1);
-  }
-  
-  .fa-youtube:hover,
-  .fa-youtube:focus {
-    color: #df2426;
-    transform: scale(1.1);
-  }
-  
-  .fa-instagram:hover,
-  .fa-instagram:focus {
-    color: #bd22a2;
-    transform: scale(1.1);
-  }
+
   
   .fa-github:hover,
   .fa-github:focus {
@@ -95,10 +77,15 @@ div {
     color: #000;
     transform: scale(1.1);
   }
-  
+  svg:hover,
+  svg:focus {
+    color: #5a0707;
+    transform: scale(1.1);
+  }
   .fa-discord:hover,
   .fa-discord:focus {
     color: #7289DA;
+    transform: scale(1.1);
   }
   section {
     position: fixed;

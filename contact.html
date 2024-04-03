@@ -9,14 +9,13 @@
     <link href="/assets/css/main.1cb63c9d.css" rel="stylesheet">
     <script src="/assets/js/app.d85f7f9b.js" defer></script>
     <link rel="stylesheet" href="/assets/css/contact.css">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'><link rel="stylesheet" href="./style.css">
-
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'>
 </head>
 <body>
     <header class="headerpage">
         <a><span onclick="window.location.href = 'index.html'">Home</span></a>
         <a><span onclick="window.location.href = 'realisation.html'">Réalisations</span></a>
-        <a><span><img src="/assets/texture/g.png" alt="logo"></span></a>
+        <a><span onclick="window.location.href = 'index.html'"><img src="/assets/texture/g.png" alt="logo"></span></a>
         <a><span onclick="window.location.href = 'competences.html'">Compétences</span></a>
         <a class="select">Contact</a>
     </header>
@@ -33,32 +32,36 @@
     <section>
         <div>
             <ul>
-
+              <li><a href="https://github.com/Spimods" target="_blank">
+                <i class="fab fa-github" tabindex="0"></i>
+              </a></li>
               <li><a href="https://codepen.io/gregoire-HERNU" target="_blank">
                   <i class="fab fa-codepen" tabindex="0"></i>
                 </a></li>
                 <li><a href="https://discord.com/users/894100395650072647" target="_blank">
                     <i class="fab fa-discord" tabindex="0"></i>
                   </a></li>
-                <li><a href="https://github.com/Spimods" target="_blank">
-                    <i class="fab fa-github" tabindex="0"></i>
+                  <li><a href="mailto:grgoiredev@gmail.com" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" style="fill: currentColor;" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
                   </a></li>
+  
             </ul>
           </div>
     </section>
     
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js'></script><script  src="./script.js"></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js'></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-
       <div class="anime-container">
-   
       </div>
       <script src="/assets/js/sourie.js"></script>
-  
-      
+
       <script src="/assets/js/main.js"></script>
 
-
-
+<footer>
+  <p>&copy; <span id="date"></span> Grégoire H | Grgoire</p>
+</footer>
+<script>let date =  new Date().getFullYear();
+document.getElementById('date').innerHTML= date
+</script>
     </body>
 </html>

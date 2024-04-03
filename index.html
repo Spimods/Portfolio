@@ -69,6 +69,12 @@ function calculerNombreAnnees(date) {
     document.getElementById('age').textContent = calculerNombreAnnees(dateDonnee) + " ans";
 </script>
 
-
+<footer>
+    <p>&copy; <span id="date"></span> Grégoire H | Grgoire</p>
+  </footer>
+  <script>let date =  new Date().getFullYear();
+  document.getElementById('date').innerHTML= date
+  </script>
+  
     </body>
 </html>

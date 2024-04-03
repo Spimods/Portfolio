@@ -13,16 +13,16 @@ body
   padding: 40px 0;
   font-family: "Quicksand", sans-serif;
   font-weight: 100;
-  font-style: normal;  
+  font-style: normal;
   top: 5%;
-  position:absolute;
-  left: 6%;
+  position: absolute;
+  width: 100%;
 }
 
 .container .box
 {
   position: relative;
-  width: 320px;
+  width: 25%;
   height: 400px;
   display: flex;
   justify-content: center;

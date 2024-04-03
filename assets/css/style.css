@@ -181,3 +181,29 @@ position: absolute;
 border-radius: 50%;
 background-color: #f1f1f1;
 }
+
+footer {
+    font-family: "roboto", serif;
+    bottom: 0;
+    position: fixed;
+    left: 5%;
+    background: #4e4e4e30;
+    width: 20%;
+    margin: 0;
+    padding: 0;
+    height: 5%;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    z-index: 10000;
+    border-radius: 10px 10px 0 0;
+    min-width: 250px;
+}
+footer p {
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    height: 100%;
+    margin: auto;
+    padding: 5% 0;
+}
