@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1f1f1f;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+}
+
+h2 {
+    color: #ff4d4d;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.table-container {
+    width: calc(100% + 17px);
+    height: 68%;
+    padding-top: 3%;
+    overflow-y: auto;
+    position: absolute;
+}
+
+table {
+    width: 80%;
+    left: 10%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background-color: #333;
+    transform: rotateX(5deg);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #555;
+}
+
+th {
+    background-color: #ff4d4d;
+}
+
+tr:nth-child(even) {
+    background-color: #1f1f1f;
+}
+
+tr:hover {
+    background-color: #444;
+}
+
+.rank {
+    width: 60px;
+}
+
+.name {
+    width: 300px;
+    min-width: 200px;
+}
+
+.score {
+    width: 120px;
+    min-width: 80px;
+}
+
+.button-group {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button-group button {
+    background-color: #ff4d4d;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.button-group button:hover {
+    background-color: #ff6666;
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
+}
+
+.highlight {
+    background-color: #ff6666 !important;
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.5) !important;
+}
