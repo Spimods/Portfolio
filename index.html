@@ -11,6 +11,8 @@
 
 </head>
 <body>
+    <input type="checkbox" role="switch" class="toggle" id="toggleButton" />
+
     <header class="headerpage">
         <a class="select">Home</a>
         <a><span onclick="window.location.href = 'realisation.html'">Réalisations</span></a>
@@ -21,7 +23,9 @@
     <div id="Page" class="is-dark">
         <div id="Background">
         <canvas data-engine="three.js r161" width="1215" height="869" style="width: 1215.41px; height: 869.406px;"></canvas>
+
     </div>
+
     <section class="layers">
         <div class="layers__container parallax">
             <div class="layers__item layer-background"></div>
@@ -75,6 +79,53 @@ function calculerNombreAnnees(date) {
     <script>let date =  new Date().getFullYear();
     document.getElementById('date').innerHTML= date
     </script>
-  
+<script>
+window.addEventListener("load", function() {
+    const background = document.getElementById("Background");
+    const toggleButton = document.getElementById("toggleButton");
+    function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        const expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+    function getCookie(cname) {
+        const name = cname + "=";
+        const decodedCookie = decodeURIComponent(document.cookie);
+        const ca = decodedCookie.split(';');
+        for (let i = 0; i <ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+    function checkCookie() {
+        const backgroundState = getCookie("backgroundState");
+        if (backgroundState !== "") {
+            background.style.display = backgroundState;
+            toggleButton.checked = backgroundState === "none";
+        }
+    }
+    checkCookie();
+    if (background && toggleButton) {
+        toggleButton.addEventListener("change", function() {
+            if (toggleButton.checked) {
+                background.style.display = "none";
+                setCookie("backgroundState", "none", 30);
+            } else {
+                background.style.display = "block";
+                setCookie("backgroundState", "block", 30);
+            }
+        });
+    } else {
+        console.error("L'élément background ou le bouton toggleButton n'a pas été trouvé.");
+    }
+});
+</script>
     </body>
 </html>

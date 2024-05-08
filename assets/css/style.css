@@ -70,6 +70,9 @@ body {
     pointer-events: none;
 
 }
+.hidden {
+    display: none;
+}
 
 .page {
     display: none;
@@ -207,3 +210,226 @@ footer p {
     margin: auto;
     padding: 5% 0;
 }
+.toggle {
+    z-index:  100;
+    position: fixed;
+    cursor: pointer;
+    bottom: 40px;
+    transform: scale(2.5);
+    right: 60px;
+    --speed: 0.4s;
+    --innerdelay: 0.05s;
+    --delay: 0.4s;
+    --angle: 45deg;
+    --x0: 0.1em; --x1: 0.1em; --x2: 0.1em;
+    --x3: 0.1em; --x4: 0.1em; --x5: 0.1em;
+    --x6: 0.1em; --x7: 0.1em; --x8: 0.1em;
+    --y0: 0.1em; --y1: 0.1em; --y2: 0.1em;
+    --y3: 0.1em; --y4: 0.1em; --y5: 0.1em;
+    --y6: 0.1em; --y7: 0.1em; --y8: 0.1em;
+    --x10: -0.4em; --x11: -0.4em; --x12: -0.4em;
+    --x13: -0.4em; --x14: -0.4em; --x15: -0.4em;
+    --x16: -0.4em; --x17: -0.4em; --x18: -0.4em;
+    --y10: -1.9em; --y11: -1.9em; --y12: -1.9em;
+    --y13: -1.9em; --y14: -1.9em; --y15: -1.9em;
+    --y16: -1.9em; --y17: -1.9em; --y18: -1.9em;
+    appearance: none;
+    font-size: 1em;
+    box-sizing: content-box;
+    border: max(1px, 0.05em) solid white;
+    width: 2.5em;
+    height: 1em;
+    color: white;
+    transition:
+        --x0 var(--speed) calc(var(--delay) + var(--innerdelay) * 0),
+        --x1 var(--speed) calc(var(--delay) + var(--innerdelay) * 1),
+        --x2 var(--speed) calc(var(--delay) + var(--innerdelay) * 2),
+        --x3 var(--speed) calc(var(--delay) + var(--innerdelay) * 3),
+        --x4 var(--speed) calc(var(--delay) + var(--innerdelay) * 4),
+        --x5 var(--speed) calc(var(--delay) + var(--innerdelay) * 5),
+        --x6 var(--speed) calc(var(--delay) + var(--innerdelay) * 6),
+        --x7 var(--speed) calc(var(--delay) + var(--innerdelay) * 7),
+        --x8 var(--speed) calc(var(--delay) + var(--innerdelay) * 8),
+        --y0 var(--speed) calc(var(--delay) + var(--innerdelay) * 0),
+        --y1 var(--speed) calc(var(--delay) + var(--innerdelay) * 1),
+        --y2 var(--speed) calc(var(--delay) + var(--innerdelay) * 2),
+        --y3 var(--speed) calc(var(--delay) + var(--innerdelay) * 3),
+        --y4 var(--speed) calc(var(--delay) + var(--innerdelay) * 4),
+        --y5 var(--speed) calc(var(--delay) + var(--innerdelay) * 5),
+        --y6 var(--speed) calc(var(--delay) + var(--innerdelay) * 6),
+        --y7 var(--speed) calc(var(--delay) + var(--innerdelay) * 7),
+        --y8 var(--speed) calc(var(--delay) + var(--innerdelay) * 8),
+        --x10 var(--speed) calc(var(--innerdelay) * 0),
+        --x11 var(--speed) calc(var(--innerdelay) * 1),
+        --x12 var(--speed) calc(var(--innerdelay) * 2),
+        --x13 var(--speed) calc(var(--innerdelay) * 3),
+        --x14 var(--speed) calc(var(--innerdelay) * 4),
+        --x15 var(--speed) calc(var(--innerdelay) * 5),
+        --x16 var(--speed) calc(var(--innerdelay) * 6),
+        --x17 var(--speed) calc(var(--innerdelay) * 7),
+        --x18 var(--speed) calc(var(--innerdelay) * 8),
+        --y10 var(--speed) calc(var(--innerdelay) * 0),
+        --y11 var(--speed) calc(var(--innerdelay) * 1),
+        --y12 var(--speed) calc(var(--innerdelay) * 2),
+        --y13 var(--speed) calc(var(--innerdelay) * 3),
+        --y14 var(--speed) calc(var(--innerdelay) * 4),
+        --y15 var(--speed) calc(var(--innerdelay) * 5),
+        --y16 var(--speed) calc(var(--innerdelay) * 6),
+        --y17 var(--speed) calc(var(--innerdelay) * 7),
+        --y18 var(--speed) calc(var(--innerdelay) * 8);
+   
+    &::before {
+      content: "";
+      width: 0.8em;
+      height: 0.8em;
+      position: absolute;
+      top: 0.1em;
+      left: 0.1em;
+      box-sizing: border-box;
+      border: 0.15em solid #f000;
+    }
+    
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:
+        /* off lines */
+        linear-gradient(var(--angle), #0000  8%, currentcolor 0 12%, #0000 0) var(--x0) var(--y0),
+        linear-gradient(var(--angle), #0000 18%, currentcolor 0 22%, #0000 0) var(--x1) var(--y1),
+        linear-gradient(var(--angle), #0000 28%, currentcolor 0 32%, #0000 0) var(--x2) var(--y2),
+        linear-gradient(var(--angle), #0000 38%, currentcolor 0 42%, #0000 0) var(--x3) var(--y3),
+        linear-gradient(var(--angle), #0000 48%, currentcolor 0 52%, #0000 0) var(--x4) var(--y4),
+        linear-gradient(var(--angle), #0000 58%, currentcolor 0 62%, #0000 0) var(--x5) var(--y5),
+        linear-gradient(var(--angle), #0000 68%, currentcolor 0 72%, #0000 0) var(--x6) var(--y6),
+        linear-gradient(var(--angle), #0000 78%, currentcolor 0 82%, #0000 0) var(--x7) var(--y7),
+        linear-gradient(var(--angle), #0000 88%, currentcolor 0 92%, #0000 0) var(--x8) var(--y8),
+        /* on lines */
+        linear-gradient(var(--angle), #0000  8%, currentcolor 0 12%, #0000 0) var(--x10) var(--y10),
+        linear-gradient(var(--angle), #0000 18%, currentcolor 0 22%, #0000 0) var(--x11) var(--y11),
+        linear-gradient(var(--angle), #0000 28%, currentcolor 0 32%, #0000 0) var(--x12) var(--y12),
+        linear-gradient(var(--angle), #0000 38%, currentcolor 0 42%, #0000 0) var(--x13) var(--y13),
+        linear-gradient(var(--angle), #0000 48%, currentcolor 0 52%, #0000 0) var(--x14) var(--y14),
+        linear-gradient(var(--angle), #0000 58%, currentcolor 0 62%, #0000 0) var(--x15) var(--y15),
+        linear-gradient(var(--angle), #0000 68%, currentcolor 0 72%, #0000 0) var(--x16) var(--y16),
+        linear-gradient(var(--angle), #0000 78%, currentcolor 0 82%, #0000 0) var(--x17) var(--y17),
+        linear-gradient(var(--angle), #0000 88%, currentcolor 0 92%, #0000 0) var(--x18) var(--y18),
+        #0000;
+      background-size: 0.8em 0.8em;
+      background-repeat: no-repeat;
+    }
+    
+    &:checked {
+      --x0: 2.1em; --x1: 2.1em; --x2: 2.1em;
+      --x3: 2.1em; --x4: 2.1em; --x5: 2.1em;
+      --x6: 2.1em; --x7: 2.1em; --x8: 2.1em;
+      --y0: 2.1em; --y1: 2.1em; --y2: 2.1em;
+      --y3: 2.1em; --y4: 2.1em; --y5: 2.1em;
+      --y6: 2.1em; --y7: 2.1em; --y8: 2.1em;
+      --x10: 1.6em; --x11: 1.6em; --x12: 1.6em;
+      --x13: 1.6em; --x14: 1.6em; --x15: 1.6em;
+      --x16: 1.6em; --x17: 1.6em; --x18: 1.6em;
+      --y10: 0.1em; --y11: 0.1em; --y12: 0.1em;
+      --y13: 0.1em; --y14: 0.1em; --y15: 0.1em;
+      --y16: 0.1em; --y17: 0.1em; --y18: 0.1em;
+      
+      transition:
+        --x0 var(--speed) calc(var(--innerdelay) * 0),
+        --x1 var(--speed) calc(var(--innerdelay) * 1),
+        --x2 var(--speed) calc(var(--innerdelay) * 2),
+        --x3 var(--speed) calc(var(--innerdelay) * 3),
+        --x4 var(--speed) calc(var(--innerdelay) * 4),
+        --x5 var(--speed) calc(var(--innerdelay) * 5),
+        --x6 var(--speed) calc(var(--innerdelay) * 6),
+        --x7 var(--speed) calc(var(--innerdelay) * 7),
+        --x8 var(--speed) calc(var(--innerdelay) * 8),
+        --y0 var(--speed) calc(var(--innerdelay) * 0),
+        --y1 var(--speed) calc(var(--innerdelay) * 1),
+        --y2 var(--speed) calc(var(--innerdelay) * 2),
+        --y3 var(--speed) calc(var(--innerdelay) * 3),
+        --y4 var(--speed) calc(var(--innerdelay) * 4),
+        --y5 var(--speed) calc(var(--innerdelay) * 5),
+        --y6 var(--speed) calc(var(--innerdelay) * 6),
+        --y7 var(--speed) calc(var(--innerdelay) * 7),
+        --y8 var(--speed) calc(var(--innerdelay) * 8),
+        --x10 var(--speed) calc(var(--delay) + var(--innerdelay) * 0),
+        --x11 var(--speed) calc(var(--delay) + var(--innerdelay) * 1),
+        --x12 var(--speed) calc(var(--delay) + var(--innerdelay) * 2),
+        --x13 var(--speed) calc(var(--delay) + var(--innerdelay) * 3),
+        --x14 var(--speed) calc(var(--delay) + var(--innerdelay) * 4),
+        --x15 var(--speed) calc(var(--delay) + var(--innerdelay) * 5),
+        --x16 var(--speed) calc(var(--delay) + var(--innerdelay) * 6),
+        --x17 var(--speed) calc(var(--delay) + var(--innerdelay) * 7),
+        --x18 var(--speed) calc(var(--delay) + var(--innerdelay) * 8),
+        --y10 var(--speed) calc(var(--delay) + var(--innerdelay) * 0),
+        --y11 var(--speed) calc(var(--delay) + var(--innerdelay) * 1),
+        --y12 var(--speed) calc(var(--delay) + var(--innerdelay) * 2),
+        --y13 var(--speed) calc(var(--delay) + var(--innerdelay) * 3),
+        --y14 var(--speed) calc(var(--delay) + var(--innerdelay) * 4),
+        --y15 var(--speed) calc(var(--delay) + var(--innerdelay) * 5),
+        --y16 var(--speed) calc(var(--delay) + var(--innerdelay) * 6),
+        --y17 var(--speed) calc(var(--delay) + var(--innerdelay) * 7),
+        --y18 var(--speed) calc(var(--delay) + var(--innerdelay) * 8);
+      
+      &::before {
+        left: 1.6em;
+      }
+    }
+    
+    &[disabled] {
+      opacity: 0.25;
+    }
+  }
+  
+  @media (prefers-reduced-motion) {
+    .toggle {
+      &, &::before, &::after {
+        transition: none !important;
+        animation: none !important;
+      }
+    }
+  }
+  
+  @property --speed { syntax: '<time>'; initial-value: 0.4s; inherits: true; }
+  @property --innerdelay { syntax: '<time>'; initial-value: 0.05s; inherits: true; }
+  @property --delay { syntax: '<time>'; initial-value: 0.3s; inherits: true; }
+  @property --angle { syntax: '<angle>'; initial-value: 45deg; inherits: true; }
+  @property --x0 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --x1 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --x2 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --x3 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --x4 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --x5 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --x6 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --x7 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --x8 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --y0 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --y1 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --y2 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --y3 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --y4 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --y5 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --y6 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --y7 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --y8 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --x10 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --x11 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --x12 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --x13 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --x14 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --x15 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --x16 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --x17 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --x18 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --y10 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --y11 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --y12 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --y13 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --y14 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --y15 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --y16 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --y17 { syntax: '<length>'; initial-value: 1px; inherits: true; }
+  @property --y18 { syntax: '<length>'; initial-value: 1px; inherits: true; }
